@@ -1,0 +1,21 @@
+<div>
+    <div class="card">
+        <h2>Total Post Count: {{postCount}}</h2><hr>
+        <ul>
+          <li *ngFor="let post of postsArray; let i = index;">
+            <div>
+              <a (click)="onClickLink(i)" style="padding: 10px;cursor: pointer;">{{post.title}}</a><br>
+            </div>
+          </li>
+        </ul>
+    </div>
+    <br><br>
+
+    <div *ngIf="showDetails" class="card">
+        <h2>{{postsArray[postIndex].title}} Details</h2><hr>
+        <div>
+            <h3>{{postsArray[postIndex].headline}}</h3>
+            <p>{{postsArray[postIndex].description}}</p>
+          </div>
+    </div>
+</div>

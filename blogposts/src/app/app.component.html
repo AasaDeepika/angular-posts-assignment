@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="body">
+  <div id="leftbox">
+    <h2>Summary</h2>
+    <app-post-summary [postCount]=totalPostCount [postsArray]=postsArray></app-post-summary>
+    <!-- <app-post-details></app-post-details> -->
+    
+  </div>
+
+  <div id="middlebox">
+    <h2>Blog Feed</h2>
+    <ul>
+      <li *ngFor="let post of postsArray">
+        <div>
+          <h3>{{post.title| uppercase}} </h3>
+          <hr>
+          <h4>{{post.headline}}</h4>
+          <p>{{post.description}}</p>
+        </div>
+      </li>
+    </ul>
+
+    
+  </div>
+
+  <div id="rightbox">
+    <h2>Create</h2>
+    <button class="button" (click)=onClickNewPost()>New Post</button>
+    <div *ngIf="showNewPostForm">
+      <app-new-post (postSubmitEvent)="onNewPostSubmit($event)"></app-new-post>
+    </div>
+    
+  </div>
+</div>

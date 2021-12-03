@@ -1,0 +1,68 @@
+#leftbox {
+    float:left; 
+    background:rgb(255, 230, 230);
+    width:25%;
+    height:280px;
+    height: 100vh;
+}
+#middlebox{
+    float:left; 
+    background:rgb(219, 227, 255);
+    width:50%;
+    height: 100vh;
+}
+#rightbox{
+    float:right;
+    background:rgb(219, 255, 222);
+    width:25%;
+    height: 100vh;
+    align-items:stretch;
+}
+
+h2{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.body{
+    margin: 0px;
+    /* height: 100%; */
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+
+  ul li {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    margin-bottom: 5px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+    position: relative;
+    margin-right: 30px;
+  }
+  
+  ul li:hover {
+    background-color: #eee;
+  }

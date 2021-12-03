@@ -1,0 +1,32 @@
+<div style="padding-left: 30px;">
+    <form #newPostForm="ngForm" (ngSubmit)="onPostSubmit(newPostForm.valid)" >
+        <label for="title">Title</label><br>
+        <input #titel="ngModel" [(ngModel)]="title"  style="width: 300px;" 
+        name="Title" required type="text" id="title" placeholder="Title"><br>
+        <div *ngIf="titel.errors && (titel.dirty || titel.touched)">
+            <p *ngIf="titel.errors.required">Title is required</p>
+        </div><br>
+
+        <label for="headline">Headline</label><br>
+        <textarea #headline="ngModel" [(ngModel)]="postHeadline"  style="width: 300px;" 
+        name="Title" required type="text" id="headline" placeholder="Title"></textarea><br>
+        <div *ngIf="headline.errors && (headline.dirty || headline.touched)">
+            <p *ngIf="headline.errors.required">Headline is required</p>
+        </div><br>
+
+        <label for="description">Description</label><br>
+        <textarea #description="ngModel" [(ngModel)]="postDescription" 
+        style="width: 300px;" name="Description" 
+        id="description" placeholder="Description" required></textarea>
+        <div *ngIf="description.errors && (description.dirty || description.touched)">
+            <p *ngIf="description.errors.required">Description is required</p>
+        </div><br>
+
+        <input class="button" type="submit" name="Submit">
+        <!-- <div *ngIf="(!newPostForm.valid)">
+            <p>Enter Valid Details</p>
+        </div><br> -->
+    
+    
+    </form>
+</div>
